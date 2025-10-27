@@ -15,7 +15,7 @@ async function getPapers() {
             }
 
             paperDiv.innerHTML = `
-                <img src="paper.jpg" alt="Paper Stock Image">
+                <img src="images/paper.jpg" alt="Paper Stock Image">
                 <p>${books.title}</p>
                 <p>${books.year}</p>
                 <p>${books.published}</p>`
