@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+                        "nav"
+                        "header"
+                        "about-me"
+                        "papers"
+                        "hobbies"
+                        "blog"
+    ;
+    
+    /* global variables */
+    --heading-size: 45px;
+    --subheader-size: 25px;
+    --main-background: #efe9e1;
+    --accent-background: #d1c7bd;
+    --accent2-background: #d9d9d9;
+    --heading-color: #3e4d71;
+
+    /* global constants */
+    background-color: var(--main-background);
+    font-family: "EB Garamond";
+}
+
+/* Rules:
+    All text decoration should exist inside the text class,
+    not muddied within the grid properties
+*/
+.container h1{
+    font-size: 35px;
+    color: var(--heading-color);
+}
+.container h2{
+    font-size: 30px;
+}
+.container p{
+    font-size: 25px;
+}
+section{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+header{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+article{
+    padding-top: 1%;
+    padding-bottom: 1%; 
+}
+
+.columns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    font-size: 25px;
+    line-height: 2.5;
+    text-align: left;
+}
+
+/* Nav styling BEGIN */
+nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+
+    background-color: var(--accent2-background);
+    border-bottom: 1px solid black;
+    padding: 1%;
+    position: sticky;
+    top: 0;
+}
+
+nav a{
+    font-size: 35px;
+    text-decoration: none;
+    color: black;
+    
+}
+/* Nav styling END */
+
+/* Header styling BEGIN */
+header {
+    grid-area: header;
+    text-align: center;
+}
+
+header img{
+    width: 400px;
+}
+
+header div{
+    font-size: 35px;
+}
+/* Header styling END */
+
+/* About Me styling BEGIN */
+#about-me{
+    grid-area: about-me;
+    text-align: center;
+    background-color: var(--accent-background);
+    border-top: 1px solid black;
+}
+
+#about-me p{
+    font-style: italic;
+}
+/* About me styling END */
+
+/* Paper styling BEGIN */
+#papers{
+    grid-area: papers;
+    text-align: center;
+    border-top: 1px solid black;
+}
+
+.paper{
+    background-color: var(--accent-background);
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-left: 40%;
+    margin-right: 40%;
+    border: 1px solid black;
+}
+
+.paper img{
+    width: 50%;
+}
+/* Papers styling END */
+
+/* Hobbies styling BEGIN */
+#hobbies{
+    grid-area: hobbies;
+    text-align: center;
+    background-color: var(--accent-background);
+    border-top: 1px solid black;
+}
+
+#hobbies p{
+    font-style: italic;
+}
+
+/* Hobbies styling END */
+
+/* Blog styling BEGIN */
+#blog{
+    grid-area: blog;
+    text-align: center;
+    border-top: 1px solid black;
+}
+
+.blog-posts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+
+}
+
+.blog-posts img{
+    width: 200px;
+}
+
+.blog-posts p{
+    font-size: 20px;
+}
+
+.blog-posts h1{
+    font-size: 25px;
+}
+/* Blog styling END */
+
+/* Footer styling BEGIN */
+footer {
+    border-top: 1px solid black;
+    background-color: var(--accent2-background);
+    text-align: center;
+}
+/* Footer styling END */
